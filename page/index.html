@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../resources/css/demo.css" type="text/css">
+    <link rel="stylesheet" href="../resources/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="../resources/js/jquery.js" ></script>
+    <script type="text/javascript" src="../resources/js/jquery.ztree.core.js" ></script>
+
+
+</head>
+<script type="text/javascript">
+
+    var  ztreeObject ;
+    var ztreeSetting= {};
+    var zNode = [
+        {name:"test1", open:true, children:[
+            {name:"test1_1"}, {name:"test1_2"}]},
+        {name:"test2", open:true, children:[
+            {name:"test2_1"}, {name:"test2_2"}]}
+    ];
+    $(function () {
+        ztreeObject = $.fn.zTree.init($("#demo"),ztreeSetting,zNode);
+    });
+</script>
+<body>
+    <div>
+        <ul id="demo" class="ztree"></ul>
+    </div>
+</body>
+</html>
